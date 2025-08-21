@@ -171,7 +171,7 @@ diagrams/
 
 ## ✒️ Autor
 
-Feito com ❤️ por **[Seu Nome Completo Aqui]**  
+Feito por **[Gustavo do Rosário Nunes]**  
 - LinkedIn: https://www.linkedin.com/in/SEU-USUARIO  
 - GitHub: [https://github.com/gugapromaster](https://github.com/gugapromaster)
 
