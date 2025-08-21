@@ -76,7 +76,7 @@ Coloque a imagem abaixo em `diagrams/modelo_entidade_relacionamento.jpg`:
 
 ### 1) Clone o repositório
 ```bash
-git clone https://github.com/SEU-USUARIO/NOME-DO-SEU-REPOSITORIO.git
+git clone https://github.com/gugapromaster/NOME-DO-SEU-REPOSITORIO.git
 cd NOME-DO-SEU-REPOSITORIO
 ```
 
@@ -173,7 +173,7 @@ diagrams/
 
 Feito com ❤️ por **[Seu Nome Completo Aqui]**  
 - LinkedIn: https://www.linkedin.com/in/SEU-USUARIO  
-- GitHub: https://github.com/SEU-USUARIO
+- GitHub: [https://github.com/gugapromaster](https://github.com/gugapromaster)
 
 ---
 
@@ -187,10 +187,6 @@ Este projeto está sob a licença **MIT**. Consulte o arquivo `LICENSE` para mai
 
 ## 🧩 Notas Finais
 
-- **Substitua os placeholders**: `SEU-USUARIO`, `NOME-DO-SEU-REPOSITORIO`, seu **nome completo** e links do **LinkedIn/GitHub**.
-- **Garanta** que as imagens dos diagramas (`diagrama_de_classe.jpg` e `modelo_entidade_relacionamento.jpg`) estejam na pasta `diagrams/`.
-- Ajuste nomes de pacotes se necessário (ex.: `com.example.imobiliaria`).
-
----
-
-> Projeto educacional e de uso interno. Adeque as regras de negócio e validações conforme a realidade da sua imobiliária.
+- **Substitua os placeholders**: `NOME-DO-SEU-REPOSITORIO`, seu **nome completo** e, se quiser, o link do **LinkedIn**.  
+- **Garanta** que as imagens dos diagramas (`diagrama_de_classe.jpg` e `modelo_entidade_relacionamento.jpg`) estejam na pasta `diagrams/`.  
+- Ajuste nomes de pacotes se necessário (ex.: `com.example.imobiliaria`).  
