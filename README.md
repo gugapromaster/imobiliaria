@@ -172,7 +172,7 @@ diagrams/
 ## ✒️ Autor
 
 Feito por **[Gustavo do Rosário Nunes]**  
-- LinkedIn: https://www.linkedin.com/in/SEU-USUARIO  
+- LinkedIn: www.linkedin.com/in/gustavo-do-rosario-nunes-874672368  
 - GitHub: [https://github.com/gugapromaster](https://github.com/gugapromaster)
 
 ---
