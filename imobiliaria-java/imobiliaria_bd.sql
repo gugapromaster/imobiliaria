@@ -2,7 +2,7 @@
 CREATE DATABASE IF NOT EXISTS imobiliaria_db;
 
 -- Seleciona o banco de dados para uso
-USE imobiliaria_db;
+USE imobiliaria_db;                 
 
 -- Tabela de Clientes
 CREATE TABLE clientes (
