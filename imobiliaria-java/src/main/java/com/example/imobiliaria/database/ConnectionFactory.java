@@ -8,7 +8,7 @@ public class ConnectionFactory {
     private static final String URL = "jdbc:mysql://localhost:3306/imobiliaria_db";
     // IMPORTANTE: Altere o usuário e a senha para os do seu banco de dados local
     private static final String USER = "root";
-    private static final String PASSWORD = "";
+    private static final String PASSWORD = "univille";
 
     public static Connection getConnection() {
         try {
