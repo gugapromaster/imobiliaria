@@ -2,10 +2,10 @@
 CREATE DATABASE IF NOT EXISTS imobiliaria_db;
 
 -- Seleciona o banco de dados para uso
-USE imobiliaria_db;                 
+USE imobiliaria_db;
 
 -- Tabela de Clientes
-CREATE TABLE clientes (
+CREATE TABLE IF NOT EXISTS clientes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
     cpf VARCHAR(14) NOT NULL UNIQUE,
@@ -14,7 +14,7 @@ CREATE TABLE clientes (
 );
 
 -- Tabela de Imóveis
-CREATE TABLE imoveis (
+CREATE TABLE IF NOT EXISTS imoveis (
     id INT AUTO_INCREMENT PRIMARY KEY,
     descricao VARCHAR(255) NOT NULL,
     endereco VARCHAR(255) NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE imoveis (
 );
 
 -- Tabela de Contratos de Aluguel
-CREATE TABLE contratos (
+CREATE TABLE IF NOT EXISTS contratos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_cliente INT,
     id_imovel INT,
@@ -51,15 +51,25 @@ INSERT INTO imoveis (descricao, endereco, tipo_imovel, valor_aluguel, disponivel
 ('Apartamento com sacada e churrasqueira', 'Rua XV de Novembro, 800, Glória, Joinville', 'Apartamento', 1800.00, TRUE);
 
 -- Contratos (um ativo e um expirando em breve)
--- Contrato para a kitnet (imovel 3) com a cliente Maria (cliente 2)
 INSERT INTO contratos (id_cliente, id_imovel, data_inicio, data_fim, valor_aluguel_contrato, ativo) VALUES
-(2, 3, '2025-01-15', '2026-01-14', 950.00, TRUE);
-
--- Contrato que vai expirar em breve (para teste do relatório)
--- Supondo que a data atual é ~20/08/2025
-INSERT INTO contratos (id_cliente, id_imovel, data_inicio, data_fim, valor_aluguel_contrato, ativo) VALUES
+(2, 3, '2025-01-15', '2026-01-14', 950.00, TRUE),
 (1, 1, '2024-09-10', '2025-09-09', 1500.00, TRUE);
 
 -- Atualiza o status dos imóveis alugados
 UPDATE imoveis SET disponivel = FALSE WHERE id = 1;
 UPDATE imoveis SET disponivel = FALSE WHERE id = 3;
+
+-- ==============================
+-- Consulta de contratos ativos
+-- ==============================
+SELECT con.id AS contrato_id,
+       cli.nome AS cliente,
+       cli.cpf,
+       imo.descricao AS imovel,
+       con.data_inicio,
+       con.data_fim,
+       con.valor_aluguel_contrato
+FROM contratos con
+JOIN clientes cli ON con.id_cliente = cli.id
+JOIN imoveis imo ON con.id_imovel = imo.id
+WHERE con.ativo = TRUE;

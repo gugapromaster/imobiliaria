@@ -41,7 +41,7 @@ public class Relatorios {
         List<Contrato> contratos = new ArrayList<>();
         String sql = "SELECT con.*, cli.nome as nome_cliente, imo.descricao as descricao_imovel " +
                      "FROM contratos con " +
-                "JOIN clientes cli ON con.cliente_id = cli.id "  +
+                "JOIN clientes cli ON con.id_cliente = cli.id "  +
                      "JOIN imoveis imo ON con.id_imovel = imo.id " +
                      "WHERE con.ativo = TRUE AND CURDATE() BETWEEN con.data_inicio AND con.data_fim";
 
